@@ -1,0 +1,682 @@
+@font-face {
+  font-family: 'Saira';
+  src: url('fonts/SairaCondensedBold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  background-color: #ffcedf;
+  margin: 0;
+  padding: 0;
+}
+
+/* structure for phone: one tile, up to 600px resolution */
+header {
+  width: 100%;
+  height: 200px;
+  background-image: url(../images/header-background.png);
+  background-size: auto 130px;
+  background-repeat: repeat-x;
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  grid-template-rows: 60% 30% 10%;
+}
+
+.logo{
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  max-height: 100%;
+  max-width: 100%;
+  grid-column: 1 / span 4;
+  grid-row: 1;
+}
+
+.shop {
+  font-family: 'Saira', sans-serif;
+  font-size: 30pt;
+  color: #8e69a8;
+  margin: 0 auto;
+  padding: 0;
+  grid-column: 1 / span 4;
+  grid-row: 2;
+}
+
+span {
+  color: #ceace6;
+}
+
+.home {
+  font-family: 'Saira', sans-serif;
+  text-transform: uppercase;
+  font-size: 12pt;
+  color: #ceace6;
+  margin: 0 auto;
+  padding: 0;
+  grid-column: 1;
+  grid-row: 3;
+}
+
+.about {
+  font-family: 'Saira', sans-serif;
+  text-transform: uppercase;
+  font-size: 12pt;
+  color: #ceace6;
+  margin: 0 auto;
+  padding: 0;
+  grid-column: 2;
+  grid-row: 3;
+}
+
+.flavours {
+  font-family: 'Saira', sans-serif;
+  text-transform: uppercase;
+  font-size: 12pt;
+  color: #ceace6;
+  margin: 0 auto;
+  padding: 0;
+  grid-column: 3;
+  grid-row: 3;
+}
+
+.contact {
+  font-family: 'Saira', sans-serif;
+  text-transform: uppercase;
+  font-size: 12pt;
+  color: #ceace6;
+  margin: 0 auto;
+  padding: 0;
+  grid-column: 4;
+  grid-row: 3;
+}
+
+#title {
+  width: 100%;
+  height: auto;
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 70% 30%;
+  grid-template-areas:
+    "desc"
+    "location";
+}
+
+.desc {
+  font-family: 'Saira', sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 40pt;
+  color: #5e367a;
+  margin: 0 auto;
+  line-height: 40pt;
+}
+
+.location {
+  font-family: 'Saira', sans-serif;
+  text-transform: uppercase;
+  font-size: 20pt;
+  color: #5e367a;
+  text-transform: uppercase;
+  margin: 0 auto;
+}
+
+#options{
+  width: 100%;
+  height: 300px;
+  margin-bottom: 30px;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 50% 50%;
+  grid-template-areas:
+    "img1 img2"
+    "img3 img4";
+}
+
+.img1{
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  max-height: 100%;
+  max-width: 100%;
+}
+
+.img2 {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  max-height: 100%;
+  max-width: 100%;
+}
+
+.img3 {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  max-height: 100%;
+  max-width: 100%;
+}
+
+.img4 {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  max-height: 100%;
+  max-width: 100%;
+}
+
+section {
+  float: left;
+  width: 100%;
+}
+
+h1 {
+  color: #5e367a;
+  font-family: 'Saira', sans-serif;
+  text-align: center;
+  font-size: 15pt;
+  line-height: 15pt;
+  padding: 1%;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.box {
+  float: left;
+  position: relative;
+  width: 100%;
+  height: auto;
+  padding-bottom: 80%;
+}
+
+.boxInner {
+  position: absolute;
+  padding: 10px;
+  overflow: hidden;
+}
+
+.boxInner img {
+  width: 100%;
+}
+
+.boxInner .caption {
+  color: #5e367a;
+  padding: 5px;
+  font-family: 'Saira', sans-serif;
+  font-size: 12pt;
+}
+
+aside {
+  float: right;
+  display: none;
+  padding-top: 1%;
+}
+
+#news {
+  padding-top: 1%;
+  width: 100%;
+  height: auto;
+  display: grid;
+  grid-template-columns: 20% 80%;
+  grid-template-rows: 25% 25% 25% 25%;
+}
+
+.newsimg1 {
+  max-width: 100%;
+  grid-column: 1;
+  grid-row: 1;
+  padding-bottom: 40%;
+}
+
+.newsimg2 {
+  max-width: 100%;
+  grid-column: 1;
+  grid-row: 2;
+  padding-bottom: 40%;
+}
+
+.newsimg3 {
+  max-width: 100%;
+  grid-column: 1;
+  grid-row: 3;
+  padding-bottom: 40%;
+}
+
+h2 {
+  color: #5e367a;
+  font-family: 'Saira', sans-serif;
+  text-align: left;
+  font-size: 22pt;
+  line-height: 22pt;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.news1 {
+  display: grid;
+  grid-column: 2;
+  grid-row: 1;
+  padding-left: 2%;
+}
+
+.news2 {
+  display: grid;
+  grid-column: 2;
+  grid-row: 2;
+  padding-left: 2%;
+}
+
+.news3 {
+  display: grid;
+  grid-column: 2;
+  grid-row: 3;
+  padding-left: 2%;
+}
+
+.tweet {
+  grid-column: 1 / span 2;
+  grid-row: 4;
+}
+
+.tweet img {
+  display: inline;
+  float: left;
+}
+
+.tweet p {
+  font-family: 'Saira', sans-serif;
+  font-size: 10pt;
+  line-height: 12pt;
+  color: #8e69a8;
+  display: block;
+  float: left;
+  margin: 0;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+h3 {
+  color: #5e367a;
+  font-family: 'Saira', sans-serif;
+  text-align: left;
+  font-size: 12pt;
+  float: left;
+  display: inline;
+}
+
+h4 {
+  color: #5e367a;
+  font-family: 'Saira', sans-serif;
+  float: right;
+  font-size: 10pt;
+  margin: 0;
+  padding-right: 5%;
+}
+
+/* small screen/tablet: 2 tiles */
+@media only screen and (max-width : 1080px) and (min-width : 601px) {
+
+  header {
+    position: relative;
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-template-rows: 60% 40%;
+  }
+
+  .logo {
+    grid-column: 3;
+    grid-row: 1;
+  }
+
+  .home {
+    grid-column: 1;
+    grid-row: 1;
+    margin: 0;
+    margin-left: 10%;
+    position: absolute;
+    top: 35%;
+    transform: translate(0, -65%);
+  }
+
+  .about {
+    grid-column: 2;
+    grid-row: 1;
+    margin: 0;
+    margin-left: 10%;
+    position: absolute;
+    top: 35%;
+    transform: translate(0, -65%);
+  }
+
+  .flavours {
+    grid-column: 4;
+    grid-row: 1;
+    margin: 0;
+    margin-left: 10%;
+    position: absolute;
+    top: 35%;
+    transform: translate(0, -65%);
+  }
+
+  .contact {
+    grid-column: 5;
+    grid-row: 1;
+    margin: 0;
+    margin-left: 10%;
+    position: absolute;
+    top: 35%;
+    transform: translate(0, -65%);
+  }
+
+  .shop {
+    grid-column: 1 / span 5;
+    grid-row: 2;
+  }
+
+  .desc {
+    font-size: 3.3em;
+  }
+
+  .location {
+    font-size: 1.7em;
+  }
+
+  #options{
+    height: 150px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    display: grid;
+    grid-template-columns: 16.6% 16.6% 16.6% 16.6% 16.6% 16.6%;
+    grid-template-rows: 100%;
+  }
+
+  .img1{
+    grid-column: 2;
+  }
+
+  .img2 {
+    grid-column: 3;
+  }
+
+  .img3 {
+    grid-column: 4;
+  }
+
+  .img4 {
+    grid-column: 5;
+  }
+
+  .box {
+    float: left;
+    position: relative;
+    width: 50%;
+    height: auto;
+    padding-bottom: 40%;
+  }
+
+  h1 {
+    font-size: 1.4em;
+  }
+
+}
+
+/* desktop: 2 tiles and sidebar */
+@media only screen and (max-width : 1280px) and (min-width : 1081px) {
+
+  header {
+    height: 150px;
+    position: relative;
+    display: grid;
+    grid-template-columns: 15% 20% 25% 10% 10% 10% 10%;
+    grid-template-rows: 100%;
+  }
+
+  .logo {
+    grid-column: 1;
+  }
+
+  .home {
+    grid-column: 4;
+    grid-row: 1;
+    margin: 0;
+    margin-left: 10%;
+    position: absolute;
+    top: 45%;
+    transform: translate(0, -55%);
+  }
+
+  .about {
+    grid-column: 5;
+    grid-row: 1;
+    margin: 0;
+    margin-left: 10%;
+    position: absolute;
+    top: 45%;
+    transform: translate(0, -55%);
+  }
+
+  .flavours {
+    grid-column: 6;
+    grid-row: 1;
+    margin: 0;
+    margin-left: 10%;
+    position: absolute;
+    top: 45%;
+    transform: translate(0, -55%);
+  }
+
+  .contact {
+    grid-column: 7;
+    grid-row: 1;
+    margin: 0;
+    margin-left: 10%;
+    position: absolute;
+    top: 45%;
+    transform: translate(0, -55%);
+  }
+
+  .shop {
+    grid-column: 2;
+    grid-row: 1;
+    position: absolute;
+    top: 45%;
+    transform: translate(0, -55%);
+  }
+
+  .desc {
+    font-size: 3.3em;
+  }
+
+  .location {
+    font-size: 1.7em;
+  }
+
+  #options{
+    height: 150px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    display: grid;
+    grid-template-columns: 16.6% 16.6% 16.6% 16.6% 16.6% 16.6%;
+    grid-template-rows: 100%;
+  }
+
+  .img1{
+    grid-column: 2;
+  }
+
+  .img2 {
+    grid-column: 3;
+  }
+
+  .img3 {
+    grid-column: 4;
+  }
+
+  .img4 {
+    grid-column: 5;
+  }
+
+  .box {
+    float: left;
+    position: relative;
+    width: 50%;
+    height: auto;
+    padding-bottom: 40%;
+  }
+
+  section {
+    float: left;
+    width: 70%;
+  }
+
+  aside {
+    float: right;
+    width: 30%;
+    display:inline-block;
+  }
+
+  h1 {
+    text-align: left;
+    font-size: 1.4em;
+  }
+
+  h2 {
+    font-size: 1.7em;
+  }
+
+  .tweet p {
+    font-size: 0.9em;
+  }
+
+}
+
+/* desktop: 2 tiles and sidebar, 1281px+ resolution */
+@media only screen and (min-width : 1281px) {
+
+  header {
+    height: 150px;
+    position: relative;
+    display: grid;
+    grid-template-columns: 15% 20% 25% 10% 10% 10% 10%;
+    grid-template-rows: 100%;
+  }
+
+  .logo {
+    grid-column: 1;
+  }
+
+  .home {
+    grid-column: 4;
+    grid-row: 1;
+    margin: 0;
+    margin-left: 10%;
+    position: absolute;
+    top: 45%;
+    transform: translate(0, -55%);
+  }
+
+  .about {
+    grid-column: 5;
+    grid-row: 1;
+    margin: 0;
+    margin-left: 10%;
+    position: absolute;
+    top: 45%;
+    transform: translate(0, -55%);
+  }
+
+  .flavours {
+    grid-column: 6;
+    grid-row: 1;
+    margin: 0;
+    margin-left: 10%;
+    position: absolute;
+    top: 45%;
+    transform: translate(0, -55%);
+  }
+
+  .contact {
+    grid-column: 7;
+    grid-row: 1;
+    margin: 0;
+    margin-left: 10%;
+    position: absolute;
+    top: 45%;
+    transform: translate(0, -55%);
+  }
+
+  .shop {
+    grid-column: 2;
+    grid-row: 1;
+    position: absolute;
+    top: 45%;
+    transform: translate(0, -55%);
+  }
+
+  .desc {
+    font-size: 3.3em;
+  }
+
+  .location {
+    font-size: 1.7em;
+  }
+
+  #options{
+    height: 150px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    display: grid;
+    grid-template-columns: 16.6% 16.6% 16.6% 16.6% 16.6% 16.6%;
+    grid-template-rows: 100%;
+  }
+
+  .img1{
+    grid-column: 2;
+  }
+
+  .img2 {
+    grid-column: 3;
+  }
+
+  .img3 {
+    grid-column: 4;
+  }
+
+  .img4 {
+    grid-column: 5;
+  }
+
+  .box {
+    float: left;
+    position: relative;
+    width: 50%;
+    height: auto;
+    padding-bottom: 40%;
+  }
+
+  section {
+    float: left;
+    width: 70%;
+  }
+
+  aside {
+    float: right;
+    width: 30%;
+    display:inline-block;
+  }
+
+  h1 {
+    text-align: left;
+    font-size: 1.4em;
+  }
+
+  h2 {
+    font-size: 1.7em;
+  }
+
+  .tweet p {
+    font-size: 0.9em;
+  }
+
+}
